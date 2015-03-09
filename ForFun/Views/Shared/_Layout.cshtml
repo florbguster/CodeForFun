@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/styles")
+</head>
+<body>
+    <div id="Header">
+        <div class="title" >
+            @Html.ActionLink( "Code for Fun", "Index", "Home" )
+        </div>
+    </div>
+    <div id="LayoutContainer">
+        <div id="NavMenuDiv">
+            <ul id="NavBarList">
+                <li>@Html.ActionLink( "Spinning Boxes Game", "Index", "Home", new { id = "Game" } )</li>
+                <li>@Html.ActionLink( "Car Registry", "CarRegistry", "Home", new { id = "CarRegistry" } )</li>
+            </ul>
+        </div>
+        <div id="BodyContainer">
+            @RenderBody()
+        </div>
+    </div>
+
+    @section scripts
+    {
+        <script>
+            $('#Game').addClass('active');
+        </script>
+    }
+
+    @Scripts.Render( "~/bundles/js" )
+    @RenderSection( "scripts", required: false )
+</body>
+</html>

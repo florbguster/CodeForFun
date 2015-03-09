@@ -1,0 +1,36 @@
+﻿.home {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+	margin: .2em;
+	width: 1.3em;
+	height: 1.3em;
+	background-color: #77DD20;
+	border-radius: .9em;
+	padding: 1.4em;
+	float: left;
+	background-image: url(images/confused.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+.home.happy {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+	background-color: #00A2E8;
+	background-image: url(images/happy.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#allDivs
+{
+	list-style-type: none;
+}

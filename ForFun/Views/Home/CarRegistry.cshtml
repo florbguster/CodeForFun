@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div>
+    <h2>Add Cars</h2>
+
+    <div id="AddCarSection">
+        <label>Make</label>
+        <input type="text" name="make" value=" " />
+
+        <label>Model</label>
+        <input type="text" name="model" value=" " />
+
+        <label>Year</label>
+        <select id="yearDropDown">
+            <option value="-1">Select Year</option>
+        </select>
+
+        <label>Color</label>
+        <select id="yeardropdown">
+            <option value="-1">Select Color</option>
+        </select>
+
+        <input type="button" name="addCar" value="+" />
+    </div>
+
+    <hr />
+
+    <h2>Save Cars</h2>
+    <div id="SaveCarSection">
+        <form id="addCarForm">
+            <div>List of cars will be here. </div>
+        </form>
+        <input type="button" name="addCar" value="Save Cars" />
+    </div>
+
+        <hr />
+
+    <h2>Results</h2>
+    <div id="ResultSection">
+        <input type="search" name="searchBox" placeholder="Search saved cars" />
+        <div>No results</div>
+    </div>
+
+    </div>
+    @section scripts
+    {
+        <script>
+            $('#Game').removeClass('active');
+            $('#CarRegistry').addClass('active');
+        </script>
+    }
+
+    @Scripts.Render( "~/bundles/js" )
