@@ -3,9 +3,9 @@
 }
 
 
-<div>
+<section id="CarRegistrySection" ng-app>
     <h2>Add Cars</h2>
-
+    {{ 5+5}}
     <div id="AddCarSection">
         <label for="make">Make</label>
         <input type="text" name="make" value=" " />
@@ -35,7 +35,7 @@
         <input type="button" name="addCar" value="Save Cars" />
     </div>
 
-        <hr />
+    <hr />
 
     <h2>Search</h2>
     <div id="ResultSection">
@@ -43,13 +43,15 @@
         <div>No results</div>
     </div>
 
-    </div>
-    @section scripts
-    {
-        <script>
-            $('#Game').removeClass('active');
-            $('#CarRegistry').addClass('active');
-        </script>
-    }
+</section>
 
-    @Scripts.Render( "~/bundles/js" )
+
+@section scripts
+    {
+    <script>
+        $('#Game').removeClass('active');
+        $('#CarRegistry').addClass('active');
+    </script>
+}
+
+@Scripts.Render( "~/carRegistry/js" )

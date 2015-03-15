@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Spinnin' Boxes";
 }
+@Styles.Render( "~/boxGame/style" )
 
 <div>Objective: Try to change all worried boxes into smileys. Without a mistake!</div>
 
@@ -14,6 +15,7 @@
     }
 </div>
 
+
 @section scripts
     {
     <script>
@@ -21,3 +23,5 @@
         $('#Game').addClass('active');
     </script>
 }
+
+@Scripts.Render( "~/boxGame/js" )

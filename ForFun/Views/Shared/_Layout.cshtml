@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/styles")
+    @Styles.Render( "~/main/style" )
 </head>
-<body ng-app>
+<body>
     <header>
             @Html.ActionLink( "Code for Fun", "BoxGame", "Home", new { @class ="title" } )
     </header>
@@ -29,7 +29,6 @@
             @DateTime.Now.Year - &copy; David Karlinski 
         </footer>
     </div>
-        @Scripts.Render( "~/bundles/js" )
         @RenderSection( "scripts", required: false )
 </body>
 </html>

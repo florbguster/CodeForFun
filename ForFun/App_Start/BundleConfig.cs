@@ -7,16 +7,24 @@ namespace CodeForFun
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles( BundleCollection bundles )
         {
-            bundles.Add( new ScriptBundle( "~/bundles/js" )
-                   .Include( "~/Scripts/jquery-{version}.js",
-                             "~/Scripts/modernizr-*",
-                             "~/Scripts/angular.js",
-                             "~/Scripts/CarRegistry.js",
-                             "~/Scripts/Game.js" ) );
+            // main
+            bundles.Add( new StyleBundle( "~/main/style" )
+                   .Include( "~/Content/Site.css" ) );
 
-            bundles.Add( new StyleBundle( "~/Content/styles" )
-                   .Include( "~/Content/Site.css",
-                             "~/Content/Game.css" ) );
+            // box game
+            bundles.Add( new ScriptBundle( "~/boxGame/js" )
+                   .Include( "~/Scripts/jquery-{version}.js",
+                             "~/Scripts/CarRegistry.js" ) );
+
+            bundles.Add( new StyleBundle( "~/boxGame/style" )
+                   .Include( "~/Content/Game.css" ) );
+
+            // car registry
+            bundles.Add( new ScriptBundle( "~/carRegistry/js" )
+                   .Include( "~/Scripts/jquery-{version}.js",
+                             "~/Scripts/angular.js",
+                             "~/Scripts/CarRegistry.js" ) );
+
         }
     }
 }
