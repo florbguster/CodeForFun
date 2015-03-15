@@ -4,8 +4,18 @@
 
 a{
     text-decoration: none;
-    transition: all .3s ease ;
+    transition: all .5s ease ;
     color: #222;
+}
+
+a:hover, a:active{
+    text-decoration: none;
+}
+
+footer {
+    width: 11em;
+    margin: 2em auto 2em auto; 
+    clear:both;
 }
 
 label {
@@ -17,10 +27,6 @@ label {
     border-top-left-radius: 1em;
     border-bottom-left-radius: .2em;
     text-shadow: 1px 1px 1px #000;
-}
-
-a:hover, a:active{
-    text-decoration: none;
 }
 
 li {
@@ -49,76 +55,62 @@ input[type="text"], select {
     margin-right: 1em;
 }
 
-#LayoutContainer {
-    width: 70%;
-    margin: auto;
-}
-
-#Header {
+header {
     padding: 1em;
-    background-image: linear-gradient( #fff, #E0F3FF, #eee, 
-                                       #eee, #eee,  
-                                       #eee, #eee, #eee, #E0F3FF, #fff);
+    background-image: linear-gradient( #fff,    #09f, #fff, 
+                                       #09f, #09f,  
+                                       #09f, #09f, 
+                                       #fff,    #09f, #fff);
 }
 
-#Header .title a {
-    color: #000;
+header a {
+    color: #fff;
     font-size: 2.4em;
     text-shadow: 1px 1px 1px #000;
 }
 
-#Header .title a:hover {
-    color: #fff;
+header .title:hover {
+    color: #444;
     border: none;
 }
 
-.title {    
-    width: 70%;
-    margin: auto;
+nav {
+    margin: 1em auto .5em auto; 
 }
 
-#NavBarList li {
-    display: inline;
+nav a {
+    color: #E0F3FF;
+    padding: .3em .5em .3em .5em;
+    background-color: #444;
+    border-radius: .3em;
+    transition: all .5s ease;
 }
 
-    #NavBarList li a {
-        color: #E0F3FF;
-        padding: .3em .5em .3em .5em;
-        background-color: #444;
-        border-radius: .3em;
-        transition: all .5s ease;
-    }
-
-#NavBarList li a:hover, .active {
+nav a:hover, .active {
     color: #fff !important;
     background-color: #09f !important;
     border-radius: .7em !important;
     padding: .5em .7em .5em .7em !important;
 }
 
-
-#NavBarList {
-    padding: .8em;
-    background-color: #fff;
-}
-
-
-#ResultSection, #AddCarSection, #SaveCarSection{
-    background-color: #E0F3FF;
-    padding: 1em;
-    margin-bottom: 2em;
-    border-radius: .5em;
-}
-
-#BodyContainer
+section
 {
-    background-color: #f5f5f5;
     padding: .7em;
     border-radius: .7em;
     overflow: hidden;
 }
 
-video{
-    width: 320px;
-    height: 280px;
+
+/* ID */
+#LayoutContainer {
+    width: 75%;
+    margin: auto;
 }
+
+#ResultSection, #AddCarSection, #SaveCarSection{
+    background-color: #F2F2FF;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: .5em;
+}
+

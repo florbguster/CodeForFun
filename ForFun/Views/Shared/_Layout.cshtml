@@ -6,31 +6,30 @@
     @Styles.Render("~/Content/styles")
 </head>
 <body>
-    <div id="Header">
-        <div class="title" >
-            @Html.ActionLink( "Code for Fun", "Index", "Home" )
-        </div>
-    </div>
+    <header>
+            @Html.ActionLink( "Code for Fun", "Index", "Home", new { @class ="title" } )
+    </header>
     <div id="LayoutContainer">
-        <div id="NavMenuDiv">
-            <ul id="NavBarList">
-                <li>@Html.ActionLink( "Spinning Boxes Game", "Index", "Home", new { id = "Game" } )</li>
-                <li>@Html.ActionLink( "Car Registry", "CarRegistry", "Home", new { id = "CarRegistry" } )</li>
-            </ul>
-        </div>
-        <div id="BodyContainer">
+        <nav>
+            @Html.ActionLink( "Spinnin' Boxes Game", "Index", "Home", null, new { id = "Game" } )
+            @Html.ActionLink( "Car Registry", "CarRegistry", "Home", null, new { id = "CarRegistry" } )
+        </nav>
+        <section>
             @RenderBody()
-        </div>
+        </section>
+
+        @section scripts
+        {
+            <script>
+                $('#Game').addClass('active');
+            </script>
+        }
+
+        <footer>
+            @DateTime.Now.Year - &copy; David Karlinski 
+        </footer>
     </div>
-
-    @section scripts
-    {
-        <script>
-            $('#Game').addClass('active');
-        </script>
-    }
-
-    @Scripts.Render( "~/bundles/js" )
-    @RenderSection( "scripts", required: false )
+        @Scripts.Render( "~/bundles/js" )
+        @RenderSection( "scripts", required: false )
 </body>
 </html>

@@ -2,11 +2,10 @@
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     -o-transition-property: -o-transform;
-    transition-property: transform;
+    transition: transform 0.5s;
 	margin: .2em;
 	width: 1.3em;
 	height: 1.3em;
