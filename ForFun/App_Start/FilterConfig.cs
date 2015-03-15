@@ -1,8 +1,9 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace ForFun {
-    public class FilterConfig {
+namespace CodeForFun
+{
+    public class FilterConfig
+    {
         public static void RegisterGlobalFilters( GlobalFilterCollection filters )
         {
             filters.Add( new HandleErrorAttribute() );

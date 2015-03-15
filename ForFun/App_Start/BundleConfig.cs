@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace ForFun
+namespace CodeForFun
 {
     public class BundleConfig
     {

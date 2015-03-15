@@ -1,8 +1,8 @@
-﻿using ForFun.Controllers;
+﻿using CodeForFun.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Web.Mvc;
 
-namespace ForFun.Tests.Controllers
+namespace CodeForFun.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest

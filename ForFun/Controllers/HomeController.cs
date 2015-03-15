@@ -1,10 +1,10 @@
 ﻿using System.Web.Mvc;
 
-namespace ForFun.Controllers
+namespace CodeForFun.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult BoxGame()
         {
             return View();
         }
