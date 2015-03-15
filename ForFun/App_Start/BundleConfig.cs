@@ -8,14 +8,15 @@ namespace CodeForFun
         public static void RegisterBundles( BundleCollection bundles )
         {
             bundles.Add( new ScriptBundle( "~/bundles/js" )
-                .Include( "~/Scripts/jquery-{version}.js",
-                          "~/Scripts/modernizr-*",
-                          "~/Scripts/CarRegistry.js",
-                          "~/Scripts/Game.js" ) );
+                   .Include( "~/Scripts/jquery-{version}.js",
+                             "~/Scripts/modernizr-*",
+                             "~/Scripts/angular.js",
+                             "~/Scripts/CarRegistry.js",
+                             "~/Scripts/Game.js" ) );
 
             bundles.Add( new StyleBundle( "~/Content/styles" )
-                .Include( "~/Content/Site.css",
-                          "~/Content/Game.css" ) );
+                   .Include( "~/Content/Site.css",
+                             "~/Content/Game.css" ) );
         }
     }
 }

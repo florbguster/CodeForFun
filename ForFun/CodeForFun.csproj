@@ -122,6 +122,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\Game.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />

@@ -1,5 +1,9 @@
 ﻿/// <reference path="_references.js" />
 
+/* CarRegistry.js */
+
+"use strict";
+
 $(document).ready(function () {
 
     var colors = [
