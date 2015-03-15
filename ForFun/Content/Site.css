@@ -1,5 +1,6 @@
 ﻿body {
     font-family: 'Century Gothic';
+    background-color: #E0F3FF;
 }
 
 a{
@@ -93,16 +94,16 @@ nav a:hover, .active {
     padding: .5em .7em .5em .7em !important;
 }
 
-section
-{
-    padding: .7em;
+section:not(#CarRegistrySection){
+    padding: .5em;
     border-radius: .7em;
     overflow: hidden;
+    background-color: #fff;
 }
 
 
 /* ID */
-#LayoutContainer {
+#Container {
     width: 75%;
     margin: auto;
 }

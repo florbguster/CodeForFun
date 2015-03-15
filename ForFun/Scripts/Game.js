@@ -1,4 +1,4 @@
-﻿/* CarRegistry.js */
+﻿/* Game.js */
 
 "use strict";
 

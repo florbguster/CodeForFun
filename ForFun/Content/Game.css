@@ -1,10 +1,8 @@
 ﻿.home {
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    -ms-transition: -ms-transform 0.5s;
     transition: transform 0.5s;
 	margin: .2em;
 	width: 1.3em;
@@ -23,6 +21,8 @@
     -webkit-transform:rotate(360deg);
     -moz-transform:rotate(360deg);
     -o-transform:rotate(360deg);
+    -ms-transform : rotate(360deg);
+    transform : rotate(360deg);
 	background-color: #00A2E8;
 	background-image: url(images/happy.png);
 	background-repeat: no-repeat;

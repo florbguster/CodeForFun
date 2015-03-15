@@ -14,7 +14,8 @@ namespace CodeForFun
             // box game
             bundles.Add( new ScriptBundle( "~/boxGame/js" )
                    .Include( "~/Scripts/jquery-{version}.js",
-                             "~/Scripts/CarRegistry.js" ) );
+                             "~/Scripts/modernizr-{version}.js",
+                             "~/Scripts/Game.js" ) );
 
             bundles.Add( new StyleBundle( "~/boxGame/style" )
                    .Include( "~/Content/Game.css" ) );
@@ -22,6 +23,7 @@ namespace CodeForFun
             // car registry
             bundles.Add( new ScriptBundle( "~/carRegistry/js" )
                    .Include( "~/Scripts/jquery-{version}.js",
+                             "~/Scripts/modernizr-{version}.js",
                              "~/Scripts/angular.js",
                              "~/Scripts/CarRegistry.js" ) );
 
