@@ -62,16 +62,38 @@ $(document).ready(function () {
             $('#AddCarSection input[type="text"]').val("");
             $('#AddCarSection select').val(-1);
 
-           
-            cars.push(car);
+           cars.push(car);
 
             $('#SaveCarList').show();
         }
     });
 
     $('#SaveCarList').on('click', function () {
-        alert("Next step: Will be posting as JSON to contoller, and save data with entity framework.");
-        return false;
+ 
+        $.ajax({
+            url: 'Home/SaveCarList',
+            type: 'POST',
+            dataType: 'json',
+            contentType : 'application/json',
+            data: JSON.stringify(cars),
+            success: function (response) {
+                $('#CarRegistrySection').prepend(response.result);
+            }
+        });
+
+        //$.ajax({
+        //    url: '@Url.Action("GetTradeContribs", "Portfolios")',
+        //    type: 'POST',
+        //    data: {
+        //        id: 123,
+        //        portfolioId: 'some id',
+        //        nodedates: 'some node dates'
+        //    },
+        //    success: function (result) {
+        //        // You could directly use the properties of the result object here
+        //        // like for example: alert(result.nodedates);
+        //    }
+        //});
     });
 });
 

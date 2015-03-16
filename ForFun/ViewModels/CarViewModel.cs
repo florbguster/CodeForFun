@@ -5,6 +5,6 @@ namespace CodeForFun.ViewModels
 {
     public class CarViewModel
     {
-        List<CarModel> cars = new List<CarModel>();
+        IEnumerable<CarModel> cars = new List<CarModel>();
     }
 }

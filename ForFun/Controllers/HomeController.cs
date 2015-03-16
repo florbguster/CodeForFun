@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using CodeForFun.Models;
+using CodeForFun.Tasks;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace CodeForFun.Controllers
 {
@@ -14,5 +17,20 @@ namespace CodeForFun.Controllers
             return View();
         }
 
+        [HttpPost]
+        public JsonResult SaveCarList( IEnumerable<CarModel> cars )
+        {
+            IInventoryTasks InventoryTasks = new InventoryTasks();
+            var isSaved = InventoryTasks.SaveCars( cars );
+
+            if (isSaved)
+            {
+                return Json( new { result = "Save Successful" } );
+            }
+            else
+            {
+                return Json( new { result = "Save Failed." } );
+            }
+        }
     }
 }
