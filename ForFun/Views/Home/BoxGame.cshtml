@@ -4,24 +4,27 @@
 }
 @Styles.Render( "~/boxGame/style" )
 
-<div>Objective: Try to change all worried boxes into smileys. Without a mistake!</div>
 
-<div id="allDivs">
-    @for (int i = 0; i < 65; i++)
+<div>Objective: Try to change all worried boxes into smileys. Without a mistake!</div> <br />
+<section id="BoxGameSection">
+
+    <div id="allDivs">
+        @for (int i = 0; i < 72; i++)
+        {
+            <div class="home">
+                <div class="happy"> </div>
+            </div>
+        }
+    </div>
+
+
+    @section scripts
     {
-        <div class="home">
-            <div class="happy"> </div>
-        </div>
+        <script>
+            $('#CarRegistry').removeClass('active');
+            $('#Game').addClass('active');
+        </script>
     }
-</div>
-
-
-@section scripts
-    {
-    <script>
-        $('#CarRegistry').removeClass('active');
-        $('#Game').addClass('active');
-    </script>
-}
-
+</section>
 @Scripts.Render( "~/boxGame/js" )
+

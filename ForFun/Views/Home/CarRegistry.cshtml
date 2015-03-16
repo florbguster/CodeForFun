@@ -4,39 +4,49 @@
 
 
 <section id="CarRegistrySection" ng-app>
-    <h2>Add Cars</h2>
-    <div id="AddCarSection">
-        <label for="make">Make</label>
-        <input type="text" name="make" value=" " />
+    <fieldset id="AddCarSection">
+        <legend>Add Cars</legend>
+        <div>
+            <label for="make">Make</label>
+            <input type="text" name="make" id="CarMake" value=" " />
+        </div>
+        <div>
+            <label for="model">Model</label>
+            <input type="text" name="model" id="CarModel" value=" " />
+        </div>
+        <div>
+            <label for="year">Year</label>
+            <select id="CarYear">
+                <option value="-1">Select Year</option>
+            </select>
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <select id="CarColor">
+                <option value="-1">Select Color</option>
+            </select>
+        </div>
+        <input type="button" name="addCar" id="AddCar" value="+" />
+    </fieldset>
 
-        <label for="model">Model</label>
-        <input type="text" name="model" value=" " />
-
-        <label for="year">Year</label>
-        <select id="YearDropdown">
-            <option value="-1">Select Year</option>
-        </select>
-
-        <label for="color">Color</label>
-        <select id="ColorDropdown">
-            <option value="-1">Select Color</option>
-        </select>
-
-        <input type="button" name="addCar" value="+" />
-    </div>
-
+    <fieldset id="SaveCarSection">
+        <legend>Car List</legend>
+        <table id="AddCarTable">
+            <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <input type="button" name="saveCarList" id="SaveCarList" value="Save List" />
+    </fieldset>
     <hr />
 
-    <div id="SaveCarSection">
-        <form id="addCarForm">
-            <div>List of cars will be here. </div>
-        </form>
-        <input type="button" name="addCar" value="Save Cars" />
-    </div>
-
-    <hr />
-
-    <h2>Search</h2>
+    <h3>Search</h3>
     <div id="ResultSection">
         <input type="search" name="searchBox" placeholder="Search saved cars" />
         <div>No results</div>

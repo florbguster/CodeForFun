@@ -12,7 +12,7 @@ namespace CodeForFun
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "BoxGame", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "CarRegistry", id = UrlParameter.Optional }
             );
         }
     }

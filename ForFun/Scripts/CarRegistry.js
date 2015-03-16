@@ -6,6 +6,8 @@
 
 $(document).ready(function () {
 
+    $('#SaveCarList').hide();
+
     var colors = [
         { Name: "White" },
         { Name: "Blue" },
@@ -23,14 +25,53 @@ $(document).ready(function () {
         { Year: 2015 }
     ];
 
-    var colorDropdown = $('#ColorDropdown');
+    var carColor = $('#CarColor');
     $.each(colors, function (index, color) {
-        colorDropdown.append('<option value="'+ index +'">'+ color.Name +'</option>');
+        carColor.append('<option value="' + index + '">' + color.Name + '</option>');
     });
 
-    var yearDropdown = $('#YearDropdown');
+    var carYear = $('#CarYear');
     $.each(years, function (index, year) {
-        yearDropdown.append('<option value="' + index + '">' + year.Year + '</option>');
+        carYear.append('<option value="' + index + '">' + year.Year + '</option>');
+    });
+
+
+    var cars = [];
+
+    $('#AddCar').on('click', function () {
+        if ($('#CarMake').val() &&
+            $('#CarModel').val() &&
+            $('#CarYear').val() != -1 &&
+            $('#CarColor').val() != -1 )
+        {
+            var car = {
+                Make: $('#CarMake').val(),
+                Model: $('#CarModel').val(),
+                Year: $('#CarYear  option:selected').text(),
+                Color : $('#CarColor option:selected').text()
+            };
+
+            $('#AddCarTable').append(
+                                '<tr>' + 
+                                    '<td>' + car.Make + '</td>' +
+                                    '<td>' + car.Model + '</td>' +
+                                    '<td>' + car.Year + '</td>' +
+                                    '<td>' + car.Color + '</td>' +
+                                '</tr>');
+
+            $('#AddCarSection input[type="text"]').val("");
+            $('#AddCarSection select').val(-1);
+
+           
+            cars.push(car);
+
+            $('#SaveCarList').show();
+        }
+    });
+
+    $('#SaveCarList').on('click', function () {
+        alert("Next step: Will be posting as JSON to contoller, and save data with entity framework.");
+        return false;
     });
 });
 

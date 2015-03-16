@@ -11,19 +11,12 @@
     </header>
     <div id="Container">
         <nav>
-            @Html.ActionLink( "Spinnin' Boxes Game", "BoxGame", "Home", null, new { id = "Game" } )
             @Html.ActionLink( "Car Registry", "CarRegistry", "Home", null, new { id = "CarRegistry" } )
+            @Html.ActionLink( "Spinnin' Boxes Game", "BoxGame", "Home", null, new { id = "Game" } )
         </nav>
         <section>
             @RenderBody()
         </section>
-
-        @section scripts
-        {
-            <script>
-                $('#Game').addClass('active');
-            </script>
-        }
 
         <footer>
             @DateTime.Now.Year - &copy; David Karlinski 
