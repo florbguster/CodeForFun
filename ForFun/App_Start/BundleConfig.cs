@@ -12,15 +12,20 @@ namespace CodeForFun
                    .Include( "~/Content/Site.css" ) );
 
             // box game
+            bundles.Add( new StyleBundle( "~/boxGame/style" )
+                   .Include( "~/Content/Game.css" ) );
+
             bundles.Add( new ScriptBundle( "~/boxGame/js" )
                    .Include( "~/Scripts/jquery-{version}.js",
                              "~/Scripts/modernizr-{version}.js",
                              "~/Scripts/Game.js" ) );
 
-            bundles.Add( new StyleBundle( "~/boxGame/style" )
-                   .Include( "~/Content/Game.css" ) );
 
             // car registry
+            bundles.Add( new StyleBundle( "~/carRegistry/style" )
+                   .Include( "~/Content/CarRegistry.css" ) );
+
+
             bundles.Add( new ScriptBundle( "~/carRegistry/js" )
                    .Include( "~/Scripts/jquery-{version}.js",
                              "~/Scripts/modernizr-{version}.js",

@@ -2,8 +2,11 @@
     ViewBag.Title = "Home Page";
 }
 
+@Styles.Render( "~/carRegistry/style" )
 
 <section id="CarRegistrySection" ng-app>
+    <div id="SuccessMessage">Save Successful</div>
+    <div id="FailMessage">Save Failed</div>
     <fieldset id="AddCarSection">
         <legend>Add Cars</legend>
         <div>

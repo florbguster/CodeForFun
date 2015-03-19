@@ -1,0 +1,66 @@
+﻿#ResultSection, #AddCarSection, #SaveCarSection{
+    background-color: #F2F2FF;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: .5em;
+}
+
+#AddCarSection, #SaveCarSection{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#AddCarSection div{
+    display: block;
+    margin-bottom: .4em; 
+    clear: both;
+}
+
+#AddCarSection label {
+    color: #fff;
+    background-color: #09f;
+    border-bottom-right-radius: 3em;
+    text-shadow: 1px 1px 1px #000;
+    margin-right: .3em;
+    padding: 0 .4em;
+    width: 4em;
+    float: left;
+}
+
+#AddCarSection input[type="button"]{
+    float: left;
+}
+
+#SaveCarSection {
+    width: 65%;
+}
+
+#SuccessMessage{
+    color: #fff;
+    font-weight: bold;
+    padding: .4em;
+    text-align: center;
+    margin: auto;
+    text-shadow: 1px 1px 1px #000;
+    background-color: #78bb66;
+    border-radius: .2em;
+    opacity: .7;
+    display: none;
+}
+
+#FailMessage{
+    color: #fff;
+    font-weight: bold;
+    padding: .4em;
+    text-align: center;
+    margin: auto;
+    text-shadow: 1px 1px 1px #000;
+    background-color: #f44;
+    border-radius: .2em;
+    opacity: .7;
+    display: none;
+}
+
+#SaveCarList{
+    display: none;
+}

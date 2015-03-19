@@ -5,9 +5,6 @@
 "use strict";
 
 $(document).ready(function () {
-
-    $('#SaveCarList').hide();
-
     var colors = [
         { Name: "White" },
         { Name: "Blue" },
@@ -51,7 +48,7 @@ $(document).ready(function () {
                 Color : $('#CarColor option:selected').text()
             };
 
-            $('#AddCarTable').append(
+            $('#AddCarTable tbody').append(
                                 '<tr>' + 
                                     '<td>' + car.Make + '</td>' +
                                     '<td>' + car.Model + '</td>' +
@@ -77,23 +74,20 @@ $(document).ready(function () {
             contentType : 'application/json',
             data: JSON.stringify(cars),
             success: function (response) {
-                $('#CarRegistrySection').prepend(response.result);
+                if (response.result === true) {
+                    $('#SuccessMessage').toggle('slow')
+                                        .animate({ opacity: 1.0 }, 2000)
+                                        .toggle('slow');
+                    $('#AddCarTable tbody tr').remove();
+                    $('#SaveCarList').hide();
+                }
+                else {
+                    $('#FailMessage').toggle('slow')
+                                     .animate({ opacity: 1.0 }, 2000)
+                                     .toggle('slow');
+                }
             }
         });
-
-        //$.ajax({
-        //    url: '@Url.Action("GetTradeContribs", "Portfolios")',
-        //    type: 'POST',
-        //    data: {
-        //        id: 123,
-        //        portfolioId: 'some id',
-        //        nodedates: 'some node dates'
-        //    },
-        //    success: function (result) {
-        //        // You could directly use the properties of the result object here
-        //        // like for example: alert(result.nodedates);
-        //    }
-        //});
     });
 });
 

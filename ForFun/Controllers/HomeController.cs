@@ -25,11 +25,11 @@ namespace CodeForFun.Controllers
 
             if (isSaved)
             {
-                return Json( new { result = "Save Successful" } );
+                return Json( new { result = true } );
             }
             else
             {
-                return Json( new { result = "Save Failed." } );
+                return Json( new { result = false } );
             }
         }
     }

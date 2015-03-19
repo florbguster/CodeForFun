@@ -118,6 +118,7 @@
     <Compile Include="ViewModels\CarViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CarRegistry.css" />
     <Content Include="Content\Game.css" />
     <Content Include="Content\Images\confused.png" />
     <Content Include="Content\Images\happy.png" />
