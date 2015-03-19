@@ -49,19 +49,19 @@ $(document).ready(function () {
             };
 
             $('#AddCarTable tbody').append(
-                                '<tr>' + 
-                                    '<td>' + car.Make + '</td>' +
-                                    '<td>' + car.Model + '</td>' +
-                                    '<td>' + car.Year + '</td>' +
-                                    '<td>' + car.Color + '</td>' +
-                                '</tr>');
+                                        '<tr>' + 
+                                            '<td>' + car.Make + '</td>' +
+                                            '<td>' + car.Model + '</td>' +
+                                            '<td>' + car.Year + '</td>' +
+                                            '<td>' + car.Color + '</td>' +
+                                        '</tr>');
 
             $('#AddCarSection input[type="text"]').val("");
             $('#AddCarSection select').val(-1);
 
            cars.push(car);
 
-            $('#SaveCarList').show();
+           $('#SaveCarSection').fadeIn('slow').css("display", "inline-block");
         }
     });
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
                                         .animate({ opacity: 1.0 }, 2000)
                                         .toggle('slow');
                     $('#AddCarTable tbody tr').remove();
-                    $('#SaveCarList').hide();
+                    $('#SaveCarSection').fadeOut('slow');
                 }
                 else {
                     $('#FailMessage').toggle('slow')

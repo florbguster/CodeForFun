@@ -32,35 +32,27 @@
 }
 
 #SaveCarSection {
-    width: 65%;
+    display: none;
+    margin: 0;
+    width: 40%;
 }
 
-#SuccessMessage{
+#SuccessMessage, #FailMessage{
     color: #fff;
     font-weight: bold;
     padding: .4em;
     text-align: center;
     margin: auto;
     text-shadow: 1px 1px 1px #000;
-    background-color: #78bb66;
-    border-radius: .2em;
+    border-radius: .4em;
     opacity: .7;
     display: none;
+}
+
+#SuccessMessage {
+    background-color: #78bb66;
 }
 
 #FailMessage{
-    color: #fff;
-    font-weight: bold;
-    padding: .4em;
-    text-align: center;
-    margin: auto;
-    text-shadow: 1px 1px 1px #000;
     background-color: #f44;
-    border-radius: .2em;
-    opacity: .7;
-    display: none;
-}
-
-#SaveCarList{
-    display: none;
 }
